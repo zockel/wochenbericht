@@ -68,7 +68,8 @@ get_date_range() {
 }
 
 vipe_cmd() { # Helper function to call vipe
-  echo "$1 (DIESE ZEILE LÖSCHEN!)" | vipe > "$current_tex/$2.tex"
+  content="$(echo "$1 (DIESE ZEILE LÖSCHEN!)" | vipe)"
+  cat "$current_tex"/wochenbericht.tex | sed -i "s/$2/$content/g"
 }
 
 ### SCRIPT
@@ -114,9 +115,9 @@ while true; do
     sed -i "s/ABTEILUNG/$department/" "$current_tex/wochenbericht.tex"
 
   # Use vipe to let user enter their report text
-  vipe_cmd "Betriebliche Tätigkeiten" betrieb
-  vipe_cmd "Außerbetriebliche Tätigkeiten" extern
-  vipe_cmd "Berufsschule" schule
+  vipe_cmd "Betriebliche Tätigkeiten" BETRIEB
+  vipe_cmd "Außerbetriebliche Tätigkeiten" EXTERN
+  vipe_cmd "Berufsschule" SCHULE
 
   # Compile via pdflatex, remove *.log and *.aux files
   cd "$current_tex"
