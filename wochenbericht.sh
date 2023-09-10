@@ -69,7 +69,7 @@ get_date_range() {
 
 vipe_cmd() { # Helper function to call vipe
   content="$(echo "$1 (DIESE ZEILE LÖSCHEN!)" | vipe)"
-  cat "$current_tex"/wochenbericht.tex | sed -i "s/$2/$content/g"
+  sed -i "s/$2/$content/g" "$current_tex/wochenbericht.tex"
 }
 
 ### SCRIPT
