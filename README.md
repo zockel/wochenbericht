@@ -5,9 +5,9 @@ LaTeX Vorlage zum Erstellen von Wochenberichten inklusive Hilfsskript.
 ## Abhängigkeiten
 Folgende Programme werden zum Ausführen des Helferskripts benötigt:
 
-- dialog (https://man.archlinux.org/man/dialog.1.en)
-- pdflatex (https://wiki.archlinux.org/title/TeX_Live)
-- vipe (https://man.archlinux.org/man/vipe.1)
+- [dialog](https://man.archlinux.org/man/dialog.1.en)
+- [pdflatex](https://wiki.archlinux.org/title/TeX_Live)
+- [vipe](https://man.archlinux.org/man/vipe.1)
 
 
 ## Anwendung
